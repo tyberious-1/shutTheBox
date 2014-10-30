@@ -1,6 +1,8 @@
 shutTheBox
 ==========
 
+****Currently the game is in development it will be avialable shortly**** 
+
 Shut the Box Game Written in Ruby
 Based on the classic board game this game.  Please enjoy this game in your terminal. 
 Also please write to me at tyberious_1@hotmail.com with any questions. 
