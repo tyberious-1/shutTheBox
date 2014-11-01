@@ -130,7 +130,7 @@ def tile_check_all
 		end
 end
 
-# 
+# all the check_tile_* should probably be cases.
 def check_tile_one
 	if $tile.include?(1) == true
 		user_choice
@@ -149,7 +149,7 @@ end
 def check_tile_three
 	if $tile.include?(3) == true 
 		user_choice
-	elsif $tile.include?(1, 2) == true
+	elsif $tile.include?(1) == true && $tile.include?(2) == true
 		user_choice
 	else
 		game_end
@@ -159,7 +159,7 @@ end
 def check_tile_four
 	if $tile.include?(4) == true
 		user_choice
-	elsif $tile.include?(1,3) == true
+	elsif $tile.include?(1) == true && $tile.include?(3) == true
 		user_choice
 	else
 		game_end
@@ -169,9 +169,9 @@ end
 def check_tile_five
 	if $tile.include?(5) == true 
 		user_choice
-	elsif $tile.include?(2, 3) == true
+	elsif $tile.include?(2) == true && $tile.include?(3) == true
 		user_choice
-	elsif $tile.include?(1, 4) == true
+	elsif $tile.include?(1) == true && $tile.include?(4) == true
 		user_choice
 	else
 		game_end
@@ -182,9 +182,9 @@ end
 def check_tile_six
 	if $tile.include?(6) == true 
 		user_choice
-	elsif $tile.include?(1, 5) == true
+	elsif $tile.include?(1) == true && $tile.include?(5) == true
 		user_choice
-	elsif $tile.include?(1, 2, 3) == true
+	elsif $tile.include?(1) == true && $tile.include?(2) == true && $tile.include?(3) == true
 		user_choice
 	else
 		game_end
@@ -195,9 +195,13 @@ end
 def check_tile_seven
 	if $tile.include?(7) == true
 		user_choice
-	elsif $tile.include?(1, 6) == true || $tile.include?(2, 5) == true 
+	elsif $tile.include?(1) == true && $tile.include?(6) == true 
 		user_choice
-	elsif $tile.include?(3, 4) == true || $tile.include?(1, 3, 4) == true
+	elsif $tile.include?(2) == true && $tile.include?(5) == true
+		user_choice
+	elsif $tile.include?(3) == true && $tile.include?(4) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(3) == true && $tile.include?(4) == true
 		user_choice
 	else
 		game_end
@@ -207,11 +211,15 @@ end
 def check_tile_eight
 	if $tile.include?(8) == true
 		user_choice
-	elsif $tile.include?(1,7) == true || $tile.include?(2, 6) == true
+	elsif $tile.include?(1) == true && $tile.include?(7) == true
 		user_choice
-	elsif $tile.include?(3,5) == true || $tile.include?(1, 3, 4) == true
+	elsif $tile.include?(2) == true && $tile.include?(6) == true
 		user_choice
-	elsif $tile.include?(1, 2, 5) == true
+	elsif $tile.include?(3) == true && $tile.include?(5) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(3) == true && $tile.include?(4) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(2) == true && $tile.include?(5) == true
 		user_choice
 	else 
 		game_end
@@ -221,11 +229,17 @@ end
 def check_tile_nine
 	if $tile.include?(9) == true 
 		user_choice
-	elsif $tile.include?(2, 7) == true || $tile.include?(3,6) == true
+	elsif $tile.include?(2) == true  && $tile.include?(7) == true
 		user_choice
-	elsif $tile.include?(4, 5) == true || $tile.include?(2, 3, 4) == true
+	elsif $tile.include?(3) == true && $tile.include?(6) == true
 		user_choice
-	elsif $tile.include?(1, 2, 6) == true || $tile.include?(1, 8) == true
+	elsif $tile.include?(4) == true && $tile.include?(5) == true
+		user_choice
+	elsif $tile.include?(2) == true && $tile.include?(3) == true && $tile.include?(4) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(2) == true && $tile.include?(6) == true
+		user_choice
+	elsif $tile.include?(1) == true &&  $tile.inlude?(8) == true
 		user_choice
 	else
 		game_end
@@ -233,11 +247,17 @@ def check_tile_nine
 end
 
 def check_tile_ten
-	if $tile.include?(1,9) == true || $tile.include?(2, 8) == true
+	if $tile.include?(1) == true && $tile.include?(9) == true
 		user_choice
-	elsif $tile.include?(3, 7) == true || $tile.include?(4, 6) == true
+	elsif $tile.include?(2) == true && $tile.include?(8) == true
 		user_choice
-	elsif $tile.include?(2, 3, 5) == true || $tile.include?(1, 2, 3, 4) == true
+	elsif $tile.include?(3) == true && $tile.include?(7) == true
+		user_choice
+	elsif $tile.include?(4) == true && $tile.include?(6) == true
+		user_choice
+	elsif $tile.include?(2) == true && $tile.include?(3) == true && $tile.include?(5) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(2) == true && $tile.include?(3) == true && $tile.include?(4) == true
 		user_choice
 	else
 		game_end
@@ -245,13 +265,21 @@ def check_tile_ten
 end
 
 def check_tile_eleven
-	if $tile.include?(5, 6) == true || $tile.include?(4, 7) == true
+	if $tile.include?(5) == true && $tile.include?(6) == true
 		user_choice
-	elsif $tile.include?(3, 8) == true || $tile.include?(2, 9) == true
+	elsif $tile.include?(4) == true && $tile.include?(7) == true
 		user_choice
-	elsif $tile.include?(1, 2, 8) == true || $tile.include?(2, 3, 6) == true
+	elsif $tile.include?(3) == true && $tile.include?(8) == true
 		user_choice
-	elsif $tile.include?(2, 4, 5) == true || $tile.include?(1, 2, 3, 5) == true
+	elsif $tile.include?(2) == true && $tile.include?(9) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(2) == true && $tile.include?(8) == true 
+		user_choice
+	elsif $tile.include?(2) == true && $tile.include?(3) == true && $tile.include?(6) == true
+		user_choice
+	elsif $tile.include?(2) == true && $tile.include?(4) == true && $tile.include?(5) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(2) && $tile.include?(3) == true && $tile.include?(5) == true
 		user_choice
 	else
 		game_end
@@ -259,20 +287,30 @@ def check_tile_eleven
 end
 
 def check_tile_twelve
-	if $tile.include?(3, 9) == true || $tile.include?(4, 8) == true
+	if $tile.include?(3) == true  && $tile.include?(9) == true
 		user_choice
-	elsif $tile.inclue?(5, 7) == true || $tile.include?(1, 2, 9) == true
+	elsif $tile.include?(4) == true && $tile.include?(8) == true
 		user_choice
-	elsif $tile.include?(2, 3, 7) == true || $tile.include?(1, 5, 6) == true
+	elsif $tile.inclue?(5) == true && $tile.include?(7) == true
 		user_choice
-	elsif $tile.include?(3, 4, 5) == true || $tile.include?(1, 3, 8) == true
+	elsif $tile.include?(1) == true && $tile.include?(2) == true && $tile.include?(9) == true
 		user_choice
-	elsif $tile.include?(1, 4, 7) == true || $tile.include?(2, 4, 6) == true
+	elsif $tile.include?(2) == true && $tile.include?(3) == true && $tile.include?(7) == true
 		user_choice
-	elsif $tile.include?(1, 2, 3, 6) == true
+	elsif $tile.include?(1) == true && $tile.include?(5) == true && $tile.include?(6) == true
+		user_choice
+	elsif $tile.include?(3) == true && $tile.include?(4) == true && $tile.include?(5) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(3) == true && $tile.include?(8) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(4) == true && $tile.include?(7) == true 
+		user_choice
+	elsif $tile.include?(2) == true && $tile.include?(4) == true && $tile.include?(6) == true
+		user_choice
+	elsif $tile.include?(1) == true && $tile.include?(2) && $tile.include?(3) == true && $tile.include?(6) == true
 		user_choice
 	else
-	game_end
+		game_end
 	end
 end
 
